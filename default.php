@@ -5,7 +5,7 @@
 			var idk = false;
 			setInterval(omg, 30);
 			function omg() {
-				amount += 5;
+				amount += 10
 				document.getElementById("god").style.transform = "translateX(-50%) rotate(" + amount.toString() + "deg)";
 				if (amount >= 360) {
 					amount = 0;
