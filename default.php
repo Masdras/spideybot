@@ -3,7 +3,7 @@
 		<script>
 			var amount = 0;
 			var idk = false;
-			setInterval(omg, 30);
+			setInterval(omg, 3);
 			function omg() {
 				amount += 0.01;
 				document.getElementById("god").style.transform = "translateX(-50%) rotate(" + amount.toString() + "deg)";
