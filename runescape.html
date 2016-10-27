@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <SCRIPT LANGUAGE="JavaScript">
+<!--
+document.close();
+document.open();
+document.writeln('Begin JavaScript output:');
+document.writeln('<PRE>');
+
+points = 0;
+output = 0;
+minlevel = 2; // first level to display
+maxlevel = 200; // last level to display
+
+for (lvl = 1; lvl <= maxlevel; lvl++)
+{
+  points += Math.floor(lvl + 300 * Math.pow(2, lvl / 7.));
+  if (lvl >= minlevel)
+    document.writeln('Level ' + (lvl) + ' - ' + output + ' xp');
+  output = Math.floor(points / 4);
+}
+
+document.writeln('</PRE>');
+document.close();
+// -->
+</SCRIPT>
+  </head>
+  <body>
+    
+  </body>
+</html>

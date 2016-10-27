@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script>       
+      var prefix = ["dic", "di", "ska", "ha", "dro", "gan", "fra", "gran","gronos", "skran", "while"];
+      var suffix = ["ogen", "gon", "ens","skal","hsa","skro","sva","madran","dar","son", "sen", "sakral"];
+      var idk=false;
+     var interval = setInterval(generate, 30)
+   function generate() {
+    var element = document.createElement("span");
+    element.innerHTML = prefix[Math.floor(Math.random()*prefix.length)] + suffix[Math.floor(Math.random()*suffix.length)];
+    document.getElementById("namelist").appendChild(element);
+    if (document.getElementById("namelist").getBoundingClientRect().height > window.innerHeight) {
+      document.getElementById("namelist").innerHTML = "";
+    }
+   }
+      function stop() {
+        idk=!idk
+        if (idk) {
+          clearInterval(interval) 
+        } else {
+          interval = setInterval(generate, 30);
+        }
+      }
+    </script>
+    <style>
+      body{
+        margin:0;
+        padding:0;
+      }
+      * {
+        font-family: "Arial Black", Gadget, sans-serif;	
+        background:url("god.gif");
+        color: red;
+      }
+      span {
+        margin: 5px;
+        word-break: break-all;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <input id="input">
+    <a href="default.php">
+    <button >Get back to the future</button>
+    </a>
+    <button id="stop" onClick="stop();">Stop teh auto shit</button>
+    <button id="button" onClick="generate();" style="position:relative; left:1px; top:1px;">Generate names</button>
+    <div id="namelist"></div>
+  </body>
+</html>
